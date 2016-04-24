@@ -31,9 +31,9 @@ val hadoopVersion = "2.7.1"
 
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion,
-  "org.apache.hbase" %% "hbase-common" % hbaseVersion,
-  "org.apache.hbase" %% "hbase-client" % hbaseVersion,
-  "org.apache.hbase" %% "hbase-server" % hbaseVersion,
+  "org.apache.hbase" % "hbase-common" % hbaseVersion,
+  "org.apache.hbase" % "hbase-client" % hbaseVersion,
+  "org.apache.hbase" % "hbase-server" % hbaseVersion,
   "org.json4s" %% "json4s-jackson" % "3.2.11",
   // for tests
   "org.scalatest" %% "scalatest" % "2.2.4" % "test",
