@@ -21,20 +21,20 @@ scalacOptions ++= Seq(
 org.scalastyle.sbt.ScalastylePlugin.Settings
 
 resolvers ++= Seq(
-  "Cloudera repos" at "https://repository.cloudera.com/artifactory/cloudera-repos",
-  "Cloudera releases" at "https://repository.cloudera.com/artifactory/libs-release"
+  "Hadoop Releases" at "https://repository.cloudera.com/artifactory/cloudera-repos/",
+  "Artima Maven Repository" at "http://repo.artima.com/releases"
 )
 
-val sparkVersion = "1.5.0"
-val hbaseVersion = "1.0.0-cdh5.5.1"
-val hadoopVersion = "2.6.0-cdh5.5.1"
+val sparkVersion = "1.6.0"
+val hbaseVersion = "1.1.2"
+val hadoopVersion = "2.7.1"
 
 libraryDependencies ++= Seq(
-  "org.apache.spark" %% "spark-core" % sparkVersion % "provided",
-  "org.apache.hbase" % "hbase-common" % hbaseVersion % "provided",
-  "org.apache.hbase" % "hbase-client" % hbaseVersion % "provided",
-  "org.apache.hbase" % "hbase-server" % hbaseVersion % "provided",
-  "org.json4s" %% "json4s-jackson" % "3.2.11" % "provided",
+  "org.apache.spark" %% "spark-core" % sparkVersion,
+  "org.apache.hbase" %% "hbase-common" % hbaseVersion,
+  "org.apache.hbase" %% "hbase-client" % hbaseVersion,
+  "org.apache.hbase" %% "hbase-server" % hbaseVersion,
+  "org.json4s" %% "json4s-jackson" % "3.2.11",
   // for tests
   "org.scalatest" %% "scalatest" % "2.2.4" % "test",
   "org.apache.hbase" % "hbase-common" % hbaseVersion % "test" classifier "tests",
